@@ -3,11 +3,12 @@ import banner from '../../assets/assets/banner-main.png'
 import PropTypes from 'prop-types'
 
 
+
                 const Header = ({biddingMoney, claimMoney,  handleAddToClaimMoney}) => {
     return (
         
         <div>
-        <div className='flex justify-between mx-20'>
+        <div className='flex justify-between mx-20 sticky-header h-44 '>
             
             <div>
                 <img src={profile} alt="" />
@@ -19,7 +20,7 @@ import PropTypes from 'prop-types'
                <p>Schedules</p>
             </div>
             <button className="border-2 border-black w-48 h-10 rounded-xl text-slate-500 font-bold">
-      {claimMoney} {biddingMoney} Coin
+       {biddingMoney} Coins
     </button>
 
             
@@ -45,6 +46,7 @@ import PropTypes from 'prop-types'
 Header.propTypes = {
     biddingMoney: PropTypes.number.isRequired,
     claimMoney: PropTypes.number.isRequired,
+    
     handleAddToClaimMoney: PropTypes.func
 }
 

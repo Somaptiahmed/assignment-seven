@@ -9,32 +9,36 @@ function App() {
   const [schedules, setSchedules] = useState([]);
   const [biddingMoney, setBiddingMoney] = useState(0);
   const [claimMoney, setClaimMoney] = useState(0);
+  
 
  const handleAddToSchedules = blog => {
   const newSchedules = [...schedules, blog];
   setSchedules(newSchedules);
  }
 
- 
  const handleAddToClaimMoney = () => {
-  const taka = 60000000;
+  const taka = 6000000;
   const currentClaim =claimMoney + taka;
     setClaimMoney(currentClaim);
+    setBiddingMoney(currentClaim);
   }
 
- const handleAddToBiddingMoney = price => {
-  const newBiddingMoney = biddingMoney - price;
-  setBiddingMoney(newBiddingMoney);
+  const handleAddToBiddingMoney = price => {
+  
+    const newBiddingMoney = biddingMoney - price;
+    setBiddingMoney(newBiddingMoney);
+  };
+
+ 
 
 
 
- };
 
   return (
     <>
      
       
-     <Header biddingMoney={biddingMoney} claimMoney={claimMoney}></Header>
+     <Header biddingMoney={biddingMoney}  claimMoney={claimMoney}  handleAddToClaimMoney={ handleAddToClaimMoney}></Header>
     <div className='flex'>
     <Blogs handleAddToSchedules={handleAddToSchedules} handleAddToBiddingMoney={handleAddToBiddingMoney}></Blogs>
     <Schedules schedules={schedules}></Schedules>
