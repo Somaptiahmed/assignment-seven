@@ -1,7 +1,37 @@
 import PropTypes from 'prop-types'; 
 import { IoFlagSharp } from "react-icons/io5";
-const Blog = ({blog, handleAddToSchedules, handleAddToBiddingMoney}) => {
+import { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+      const Blog = ({blog, handleAddToSchedules, handleAddToBiddingMoney}) => {
     const {name, country, rounder, image, role, battingType, bowlingType, biddingPrice, button} = blog;
+
+
+    const [clickCount, setClickCount] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
+
+    const handleClick = (event) => {
+        event.preventDefault(); // Prevents any default behavior (e.g., form submit)
+        
+        if (clickCount === 0) {
+            toast.success("Congratulations! Player has been added to the team.");
+            handleAddToSchedules(blog);
+        } else if (clickCount === 1) {
+            toast.info("This player is already in the team.");
+        }
+
+        // Hide the div after 3 seconds
+        setTimeout(() => {
+            setIsVisible(false);
+        }, 3000);
+
+        setClickCount(clickCount + 1);
+    };
+    
+
+
     return (
         <div>
             <div className='bg-slate-100 w-[420px] px-5 py-5 rounded-xl border-2'>
@@ -21,9 +51,28 @@ const Blog = ({blog, handleAddToSchedules, handleAddToBiddingMoney}) => {
             </div>
             <div className='flex justify-between'>
 
-            <button onClick={() => handleAddToBiddingMoney(biddingPrice)} className='font-semibold border-2 rounded-xl'>Price: {biddingPrice}</button>
-
-            <button onClick={() => handleAddToSchedules(blog)} className='bg-slate-300 w-36 h-8 rounded-xl font-semibold'>{button}</button>
+            <button
+      onClick={() => handleAddToBiddingMoney(biddingPrice)}
+      className='font-semibold border-2 rounded-xl'>Price: {biddingPrice}
+    </button>
+    {isVisible && (
+    <button
+                onClick={handleClick}
+                disabled={clickCount >= 2}  // Disable button after two clicks
+                className='bg-slate-300 w-36 h-8 rounded-xl font-semibold'
+            >
+                {button}
+            </button>
+    )}
+            <ToastContainer 
+                position="top-right" 
+                autoClose={3000} 
+                hideProgressBar={false} 
+                closeOnClick 
+                pauseOnHover 
+                draggable 
+                theme="colored"
+            />
             </div>
             </div>
         </div>
@@ -33,6 +82,7 @@ const Blog = ({blog, handleAddToSchedules, handleAddToBiddingMoney}) => {
 };
 Blog.propTypes = {
     blog: PropTypes.object.isRequired,
+    
     handleAddToSchedules: PropTypes.func,
     handleAddToBiddingMoney: PropTypes.func
 }

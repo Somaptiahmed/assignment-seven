@@ -8,6 +8,7 @@ import { useState } from 'react'
 function App() {
   const [schedules, setSchedules] = useState([]);
   const [biddingMoney, setBiddingMoney] = useState(0);
+  
   const [claimMoney, setClaimMoney] = useState(0);
   
 
@@ -27,6 +28,7 @@ function App() {
   
     const newBiddingMoney = biddingMoney - price;
     setBiddingMoney(newBiddingMoney);
+    
   };
 
  
