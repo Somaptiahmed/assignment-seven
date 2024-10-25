@@ -9,7 +9,7 @@ const Footer = () => {
             <h1 className='text-3xl font-bold'>Subscribe to our Newsletter</h1>
             <p className='text-xl font-semibold'>Get the latest updates and news right in your inbox!</p>
             <div>
-                <input type="email" name="" id="" placeholder='Enter your email' className='w-44 h-10 border-2 rounded-lg' />
+                <input type="email" name="" id="" placeholder='Enter your email' className='w-52 h-10 border-2 rounded-lg' />
                 <button className='w-36 h-10 bg-gradient-to-r from-pink-400 to-orange-400 rounded-lg'>Subscribe</button>
             </div>
         </div>
@@ -36,8 +36,8 @@ const Footer = () => {
             <div className='space-y-5 '>
                 <h4 className='text-xl font-bold'>Subscribe</h4>
                 <p className='text-gray-500'>Subscribe to our newsletter for the latest updates.</p>
-                <input type="email" name="" id="" placeholder='Enter your email' className='w-44 h-10 border-2 rounded-lg' />
-                <button className='w-36 h-10 bg-gradient-to-r from-purple-300 to-orange-300 rounded-lg'>Subscribe</button>
+                <input type="email" name="" id="" placeholder='Enter your email' className='w-52 h-10 border-2 rounded-lg' />
+                <button className='w-32 h-10 bg-gradient-to-r from-purple-300 to-orange-300 rounded-lg'>Subscribe</button>
             </div>
             
             

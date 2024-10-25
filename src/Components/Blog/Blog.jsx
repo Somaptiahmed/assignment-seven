@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'; 
-
-const Blog = ({blog}) => {
+import { IoFlagSharp } from "react-icons/io5";
+const Blog = ({blog, handleAddToSchedules, handleAddToBiddingMoney}) => {
     const {name, country, rounder, image, role, battingType, bowlingType, biddingPrice, button} = blog;
     return (
         <div>
@@ -9,7 +9,9 @@ const Blog = ({blog}) => {
             <div className='space-y-5 mt-5'>
             <h2 className='text-3xl font-bold'> {name}</h2>
             <div className='flex justify-between font-semibold border-b-2 pb-3'>
-            <p>{country}</p>
+            
+            <p><IoFlagSharp />{country}</p>
+            
             <button className='bg-slate-300 w-32 h-8 rounded-xl'>{rounder}</button>
             </div>
             <p className='font-semibold'>{role}</p>
@@ -18,8 +20,10 @@ const Blog = ({blog}) => {
             <p className='text-slate-600'>{bowlingType}</p>
             </div>
             <div className='flex justify-between'>
-            <p className='font-semibold'>Price: {biddingPrice}</p>
-            <button className='bg-slate-300 w-36 h-8 rounded-xl font-semibold'>{button}</button>
+
+            <button onClick={() => handleAddToBiddingMoney(biddingPrice)} className='font-semibold border-2 rounded-xl'>Price: {biddingPrice}</button>
+
+            <button onClick={() => handleAddToSchedules(blog)} className='bg-slate-300 w-36 h-8 rounded-xl font-semibold'>{button}</button>
             </div>
             </div>
         </div>
@@ -28,7 +32,9 @@ const Blog = ({blog}) => {
     );
 };
 Blog.propTypes = {
-    blog: PropTypes.object.isRequired
+    blog: PropTypes.object.isRequired,
+    handleAddToSchedules: PropTypes.func,
+    handleAddToBiddingMoney: PropTypes.func
 }
 
 export default Blog;

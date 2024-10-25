@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Blog from "../Blog/Blog";
+import PropTypes from 'prop-types'
 
-const Blogs = () => {
+const Blogs = ({handleAddToSchedules, handleAddToBiddingMoney}) => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
@@ -15,10 +16,10 @@ const Blogs = () => {
     return (
         <div>
             <div className="lg:flex lg:justify-between mx-20 my-20">
-            <h1 className="font-bold">Available Players: {blogs.length}</h1>
+            <h1 className="font-bold text-2xl">Available Players</h1>
             <div className="font-bold space-x-4">
                 <button className="bg-lime-500 w-36 h-12 rounded-xl">Available </button>
-                <button className="text-slate-500 bg-slate-200 rounded-xl  w-36 h-12">Selected(0)</button>
+                
             </div>
             </div>
             
@@ -26,7 +27,8 @@ const Blogs = () => {
             <div className="grid lg:grid-cols-3 mx-20  space-x-10 space-y-10">
             {
                 
-                blogs.map(blog => <Blog key={blog.playerId} blog={blog}></Blog>)
+                blogs.map(blog => <Blog key={blog.playerId} blog={blog} 
+                    handleAddToSchedules={handleAddToSchedules} handleAddToBiddingMoney={handleAddToBiddingMoney}></Blog>)
             
         }
             </div>
@@ -41,5 +43,10 @@ const Blogs = () => {
         </div>
     );
 };
+
+Blogs.propTypes = {
+    handleAddToSchedules: PropTypes.func,
+    handleAddToBiddingMoney: PropTypes.func
+}
 
 export default Blogs;

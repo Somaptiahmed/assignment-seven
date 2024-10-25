@@ -1,6 +1,9 @@
 import profile from '../../assets/assets/logo.png'
 import banner from '../../assets/assets/banner-main.png'
-const Header = () => {
+import PropTypes from 'prop-types'
+
+
+                const Header = ({biddingMoney, claimMoney,  handleAddToClaimMoney}) => {
     return (
         
         <div>
@@ -14,8 +17,11 @@ const Header = () => {
                <p>Fixture</p>
                <p>Teams</p>
                <p>Schedules</p>
-               <button className=' border-2 border-black w-32 h-10 rounded-xl text-slate-500 font-bold'>0 Coin</button>
             </div>
+            <button className="border-2 border-black w-48 h-10 rounded-xl text-slate-500 font-bold">
+      {claimMoney} {biddingMoney} Coin
+    </button>
+
             
 
             </div>
@@ -24,8 +30,8 @@ const Header = () => {
 
                 <img src={banner} alt="" className='mx-auto items-center'/>
                 <h1 className='text-4xl font-bold text-white'>Assemble Your Ultimate Dream 11 Cricket Team</h1>
-                <p className='text-xl font-semibold text-slate-600 '>Beyond Boundaries Beyond Limits</p>
-                <button className='bg-lime-400 font-bold w-40 h-12 rounded-full border-2 border-black'>Claim Free Credit</button>
+                <p className='text-xl font-semibold text-slate-300 '>Beyond Boundaries Beyond Limits</p>
+                <button onClick={() => handleAddToClaimMoney(claimMoney)} className='bg-lime-400 font-bold w-44 h-12 rounded-full border-2 border-black '>Claim Free Credit</button>
                 </div>
             </div>
         </div>
@@ -35,5 +41,11 @@ const Header = () => {
       
     );
 };
+
+Header.propTypes = {
+    biddingMoney: PropTypes.number.isRequired,
+    claimMoney: PropTypes.number.isRequired,
+    handleAddToClaimMoney: PropTypes.func
+}
 
 export default Header;
