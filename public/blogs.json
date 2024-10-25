@@ -1,0 +1,123 @@
+[
+    {
+      "playerId": 1,
+      "name": "Virat Kohli",
+      "rounder": "All-rounder",
+      "country": "India",
+      "image": "https://i.ibb.co.com/2YVRsDg/download.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm medium",
+      "biddingPrice": 1200000,
+      "button": "Choose Player"
+    },
+    {
+      "playerId": 2,
+      "name": "Joe Root",
+      "rounder": "All-rounder",
+      "country": "England",
+      "image": "https://i.ibb.co.com/TbKntRp/5336.webp",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm ",
+      "biddingPrice": 900000,
+      "button": "Choose Player"
+    },
+    {
+      "playerId": 3,
+      "name": "Pat Cummins",
+      "rounder": "All-rounder",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/WWmRwFL/download-3.jpg",
+      "role": "Bowler",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm fast",
+      "biddingPrice": 1500000,
+      "button": "Choose Player"
+    },
+    {
+      "playerId": 4,
+      "name": "Babar Azam",
+      "rounder": "All-rounder",
+      "country": "Pakistan",
+      "image": "https://i.ibb.co.com/1Qp3s82/download-4.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "N/A",
+      "biddingPrice": 1100000,
+      "button": "Choose Player"
+    },
+    {
+      "playerId": 5,
+      "name": "Trent Boult",
+      "rounder": "All-rounder",
+      "country": "New Zealand",
+      "image": "https://i.ibb.co.com/XLGYqpZ/download-5.jpg",
+      "role": "Bowler",
+      "battingType": "Left-hand bat",
+      "bowlingType": "Left-arm fast",
+      "biddingPrice": 1300000,
+      "button": "Choose Player"
+    },
+    {
+      "playerId": 6,
+      "name": "Ben Stokes",
+      "rounder": "All-rounder",
+      "country": "England",
+      "image": "https://i.ibb.co.com/F3d3fr7/download-6.jpg",
+      "role": "All-rounder",
+      "battingType": "Left-hand bat",
+      "bowlingType": "Right-arm fast-medium",
+      "biddingPrice": 1800000,
+      "button": "Choose Player"
+    },
+    {
+      "playerId": 7,
+      "name": "Kane Williamson",
+      "rounder": "All-rounder",
+      "country": "New Zealand",
+      "image": "https://i.ibb.co.com/0M40h7z/images.jpg",
+      "role": "Batsman",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm",
+      "biddingPrice": 1000000,
+      "button": "Choose Player"
+    },
+    {
+      "playerId": 8,
+      "name": "Rashid Khan",
+      "rounder": "All-rounder",
+      "country": "Afghanistan",
+      "image": "https://i.ibb.co.com/86fx1jk/images-1.jpg",
+      "role": "Bowler",
+      "battingType": "Right-hand bat",
+      "bowlingType": "Right-arm ",
+      "biddingPrice": 1400000,
+      "button": "Choose Player"
+    },
+    {
+      "playerId": 9,
+      "name": "Quinton de Kock",
+      "rounder": "All-rounder",
+      "country": "South Africa",
+      "image": "https://i.ibb.co.com/YNy3BTW/images-2.jpg",
+      "role": "Wicketkeeper-Batsman",
+      "battingType": "Left-hand bat",
+      "bowlingType": "N/A",
+      "biddingPrice": 950000,
+      "button": "Choose Player"
+    },
+    {
+      "playerId": 10,
+      "name": "David Warner",
+      "rounder": "All-rounder",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/rvc0cGd/images-3.jpg",
+      "role": "Batsman",
+      "battingType": "Left-hand bat",
+      "bowlingType": "Right-arm ",
+      "biddingPrice": 1300000,
+      "button": "Choose Player"
+    }
+   
+  ]
