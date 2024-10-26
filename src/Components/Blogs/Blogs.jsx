@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Blog from "../Blog/Blog";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+
 
 const Blogs = ({handleAddToSchedules, handleAddToBiddingMoney}) => {
     const [blogs, setBlogs] = useState([]);
@@ -17,10 +18,7 @@ const Blogs = ({handleAddToSchedules, handleAddToBiddingMoney}) => {
         <div>
             <div className="lg:flex lg:justify-between mx-20 my-20">
             <h1 className="font-bold text-2xl">Available Players</h1>
-            <div className="font-bold space-x-4">
-                <button className="bg-lime-500 w-36 h-12 rounded-xl">Available </button>
-                
-            </div>
+            
             </div>
             
             
@@ -32,15 +30,7 @@ const Blogs = ({handleAddToSchedules, handleAddToBiddingMoney}) => {
             
         }
             </div>
-            
-         
-            
-           
-            
-            
-            
-
-        </div>
+            </div>
     );
 };
 

@@ -1,17 +1,22 @@
 import Header from './Components/Header/Header'
 import Blogs from './Components/Blogs/Blogs'
-import Schedules from './Components/Schedules/Schedules'
-import Footer from './Components/Footer/Foter'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Schedules from './Components/Schedules/Schedules';
+import Selected from './Components/Selected/Selected';
+import Footer from './Components/Footer/Foter';
+
+
 import './App.css'
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
+
 function App() {
+  
   const [schedules, setSchedules] = useState([]);
   const [biddingMoney, setBiddingMoney] = useState(0);
-
-  
   const [claimMoney, setClaimMoney] = useState(0);
   
 
@@ -20,6 +25,8 @@ function App() {
     setSchedules(newSchedules);
     
   };
+
+  
 
   const handleAddToClaimMoney = () => {
     const taka = 6000000;
@@ -39,14 +46,18 @@ function App() {
   return (
     <>
      
-      
+     <Router>
      <Header biddingMoney={biddingMoney}  claimMoney={claimMoney}  handleAddToClaimMoney={ handleAddToClaimMoney}></Header>
     <div className='flex'>
     <Blogs handleAddToSchedules={handleAddToSchedules} handleAddToBiddingMoney={handleAddToBiddingMoney}></Blogs>
-    <Schedules schedules={schedules}></Schedules>
-    </div>
-    <Footer></Footer>
     <div>
+    <Schedules schedules={schedules}></Schedules>
+    
+    </div>
+    </div>
+  <Footer></Footer>
+    
+    
     <ToastContainer
         position="top-center"
        
@@ -54,8 +65,14 @@ function App() {
         hideProgressBar={false}
         
         theme="colored"
+
       />
-    </div>
+      
+      <Routes>
+                <Route path="/selected" element={<Selected />} />
+            </Routes>
+        </Router>
+   
       
     </>
   )

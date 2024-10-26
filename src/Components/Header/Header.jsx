@@ -1,6 +1,7 @@
 import profile from '../../assets/assets/logo.png'
 import banner from '../../assets/assets/banner-main.png'
 import PropTypes from 'prop-types'
+import './Header.css'
 
 
 
@@ -8,7 +9,8 @@ import PropTypes from 'prop-types'
     return (
         
         <div>
-        <div className='flex justify-between mx-20 sticky-header h-44 '>
+        <div className='flex justify-between mx-20 sticky-header h-44  bg-slate-100 items-center rounded-xl'>
+            
             
             <div>
                 <img src={profile} alt="" />
@@ -26,6 +28,7 @@ import PropTypes from 'prop-types'
             
 
             </div>
+            
             <div className=' bg-gradient-to-r from-black to-slate-500 h-[545px] mx-20 mt-10 rounded-xl pt-10'>
                 <div className='items-center text-center space-y-5'>
 

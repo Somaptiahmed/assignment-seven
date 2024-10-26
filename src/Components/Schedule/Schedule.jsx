@@ -14,7 +14,7 @@ const Schedule = ({schedule}) => {
     return (
         isVisible && (
             <div className='mt-10'>
-                <div className='space-y-5 border-2 rounded-lg p-5 m-5 flex justify-between'>
+                <div className='space-y-5 border-2 rounded-lg p-5 m-5 flex justify-between bg-pink-50'>
                     <div className='flex justify-between'>
                         <img src={image} alt="" className='rounded-full w-24'/>
                         <div>
