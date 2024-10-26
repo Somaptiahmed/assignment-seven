@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
             </div>
              </div>
-            <div className=' bg-black h-[500px]  mt-10'>
+            <div className=' bg-black h-[500px]  mt-10 w-full'>
             
            <img src={footer} alt="" className='mx-auto pt-10'/>
            <div className='text-white flex justify-between my-10 mx-10 border-b-2 pb-5'>

@@ -16,7 +16,7 @@ const Blogs = ({handleAddToSchedules, handleAddToBiddingMoney}) => {
 
     return (
         <div>
-            <div className="lg:flex lg:justify-between mx-20 my-20">
+            <div className="lg:flex  mx-20 my-20">
             <h1 className="font-bold text-2xl">Available Players</h1>
             
             </div>

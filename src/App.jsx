@@ -37,7 +37,7 @@ function App() {
     return (
         <>
             <Header biddingMoney={biddingMoney} claimMoney={claimMoney} handleAddToClaimMoney={handleAddToClaimMoney} />
-            <div className='flex'>
+            <div className='flex justify-between' >
                 {showBlogs && (
                     <Blogs 
                         handleAddToSchedules={handleAddToSchedules} 

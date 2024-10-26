@@ -5,11 +5,11 @@ import './Header.css'
 
 
 
-                const Header = ({biddingMoney, claimMoney,  handleAddToClaimMoney}) => {
+                const Header = ({ biddingMoney, claimMoney,  handleAddToClaimMoney}) => {
     return (
         
-        <div>
-        <div className='flex justify-between mx-20 sticky-header h-44  bg-slate-100 items-center rounded-xl'>
+        <div className=' mx-20'>
+        <div className='flex justify-between sticky-header h-44  bg-slate-100 items-center rounded-xl'>
             
             
             <div>
@@ -29,7 +29,7 @@ import './Header.css'
 
             </div>
             
-            <div className=' bg-gradient-to-r from-black to-slate-500 h-[545px] mx-20 mt-10 rounded-xl pt-10'>
+            <div className=' bg-gradient-to-r from-black to-slate-500 h-[530px]  mt-10 rounded-xl pt-10'>
                 <div className='items-center text-center space-y-5'>
 
                 <img src={banner} alt="" className='mx-auto items-center'/>
@@ -48,6 +48,7 @@ import './Header.css'
 
 Header.propTypes = {
     biddingMoney: PropTypes.number.isRequired,
+    
     claimMoney: PropTypes.number.isRequired,
     
     handleAddToClaimMoney: PropTypes.func

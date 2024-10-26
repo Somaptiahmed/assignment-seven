@@ -25,8 +25,9 @@ const Schedules = ({ schedules, setShowBlogs }) => {
     };
 
     return (
-        <div className='space-x-5 font-bold mx-20'>
-            <button 
+        <div className=' font-bold lg:mx-20'>
+           <div className='lg:space-x-5 sm:space-y-3'>
+           <button 
                 className="bg-lime-500 rounded-xl w-36 h-12 mt-20"
                 onClick={handleAvailableClick}
             >
@@ -39,6 +40,7 @@ const Schedules = ({ schedules, setShowBlogs }) => {
             >
                 Selected ({schedules.length}/6)
             </button>
+           </div>
 
             
 
