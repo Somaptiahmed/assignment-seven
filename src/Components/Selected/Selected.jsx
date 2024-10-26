@@ -2,8 +2,8 @@
 import { useLocation } from 'react-router-dom';
 
 const Selected = () => {
-    const location = useLocation(); // Get the location object
-    const { selectedSchedules } = location.state || { selectedSchedules: [] }; // Retrieve selected schedules
+    const location = useLocation(); 
+    const { selectedSchedules } = location.state || { selectedSchedules: [] }; 
 
     return (
         <div className="text-center mt-20">
@@ -11,7 +11,7 @@ const Selected = () => {
             {selectedSchedules.length > 0 ? (
                 <ul>
                     {selectedSchedules.map((schedule, index) => (
-                        <li key={index}>{schedule.name} - {schedule.role}</li> // Display schedule details
+                        <li key={index}>{schedule.name} - {schedule.role}</li> 
                     ))}
                 </ul>
             ) : (
