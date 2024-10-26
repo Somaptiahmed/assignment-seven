@@ -20,4 +20,4 @@ A React-based application for selecting and managing players for a team. Users c
 
 3. **Dynamic View Switching:** Users can toggle between viewing available players and their selected team, enhancing the user experience by keeping the interface organized.
 
-Live Link:
+Live Link:  dusty-battle.surge.sh

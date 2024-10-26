@@ -31,8 +31,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
     return (
         <div>
-            <div className='bg-slate-100 px-5 py-5 rounded-xl border-2 w-[420px]'>
-            <img src={image} alt="" className='w-[380px] h-[240px] rounded-xl' />
+            <div className='bg-slate-100 px-5 py-5 rounded-xl border-2 w-[300px]'>
+            <img src={image} alt="" className='w-[260px] h-[240px] rounded-xl' />
             <div className='space-y-5 mt-5'>
             <h2 className='text-3xl font-bold'> {name}</h2>
             <div className='flex justify-between font-semibold border-b-2 pb-3'>
