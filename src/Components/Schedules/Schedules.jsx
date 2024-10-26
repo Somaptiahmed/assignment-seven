@@ -6,10 +6,16 @@ const Schedules = ({ schedules, setShowBlogs }) => {
     const [isActive, setIsActive] = useState(false);
     const [showSelectedData, setShowSelectedData] = useState(false);
 
+    
+
     const handleSelectClick = () => {
-        setIsActive(true);
-        setShowSelectedData(true);
-        setShowBlogs(false); 
+        if (schedules.length < 7) {
+            setIsActive(true);
+            setShowSelectedData(true);
+            setShowBlogs(false); 
+        } else {
+            alert("You cannot select more than 6 players."); 
+        }
     };
 
     const handleAvailableClick = () => {
@@ -24,6 +30,7 @@ const Schedules = ({ schedules, setShowBlogs }) => {
         setShowBlogs(true);
     };
 
+   
     return (
         <div className=' font-bold lg:mx-20'>
            <div className='lg:space-x-5 sm:space-y-3'>
@@ -35,11 +42,14 @@ const Schedules = ({ schedules, setShowBlogs }) => {
             </button>
 
             <button
-                className={`text-slate-500 rounded-xl w-36 h-12 lg:mt-20 btn ${isActive ? 'bg-green-500 text-white' : 'bg-slate-200 '}`}
-                onClick={handleSelectClick} disabled={schedules.length >= 6}
+                className={`text-slate-500 rounded-xl w-36 h-12 lg:mt-20 btn ${isActive ? 'bg-green-500 text-white' : 'bg-slate-200'}`}
+                onClick={handleSelectClick}
+                
             >
-                Selected ({schedules.length}/6)
+                Selected ({Math.min(schedules.length, 6)}/6)
             </button>
+
+        
            </div>
 
             
@@ -66,7 +76,8 @@ const Schedules = ({ schedules, setShowBlogs }) => {
 
 Schedules.propTypes = {
     schedules: PropTypes.array.isRequired,
-    setShowBlogs: PropTypes.func.isRequired 
+    setShowBlogs: PropTypes.func.isRequired,
+    handleAddToSchedules: PropTypes.func.isRequired 
 };
 
 export default Schedules;
