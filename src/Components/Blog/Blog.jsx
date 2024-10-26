@@ -8,29 +8,25 @@ import 'react-toastify/dist/ReactToastify.css';
       const Blog = ({blog, handleAddToSchedules, handleAddToBiddingMoney}) => {
     const {name, country, rounder, image, role, battingType, bowlingType, biddingPrice, button} = blog;
 
-
+ 
     const [clickCount, setClickCount] = useState(0);
-    const [isVisible, setIsVisible] = useState(true);
-
+    
+   
     const handleClick = (event) => {
-        event.preventDefault(); // Prevents any default behavior (e.g., form submit)
+        event.preventDefault(); 
         
         if (clickCount === 0) {
-            toast.success("Congratulations! Player has been added to the team.");
+            toast.success("Congratulations! Player has been added to the team." );
             handleAddToSchedules(blog);
         } else if (clickCount === 1) {
-            toast.info("This player is already in the team.");
+            toast.info("This player is already in the team." );
         }
-
-        // Hide the div after 3 seconds
-        setTimeout(() => {
-            setIsVisible(false);
-        }, 3000);
 
         setClickCount(clickCount + 1);
     };
     
-
+    
+   
 
     return (
         <div>
@@ -50,31 +46,28 @@ import 'react-toastify/dist/ReactToastify.css';
             <p className='text-slate-600'>{bowlingType}</p>
             </div>
             <div className='flex justify-between'>
-
             <button
-      onClick={() => handleAddToBiddingMoney(biddingPrice)}
-      className='font-semibold border-2 rounded-xl'>Price: {biddingPrice}
-    </button>
-    {isVisible && (
+       onClick={() => handleAddToBiddingMoney(biddingPrice)}
+       
+       className='font-semibold border-2 rounded-xl'>Price: {biddingPrice}
+      </button>
+ 
+            
+
+
     <button
-                onClick={handleClick}
-                disabled={clickCount >= 2}  // Disable button after two clicks
-                className='bg-slate-300 w-36 h-8 rounded-xl font-semibold'
-            >
-                {button}
-            </button>
-    )}
-            <ToastContainer 
-                position="top-right" 
-                autoClose={3000} 
-                hideProgressBar={false} 
-                closeOnClick 
-                pauseOnHover 
-                draggable 
-                theme="colored"
-            />
+                    onClick={handleClick}
+                    disabled={clickCount >= 2}  
+                    className='bg-slate-300 w-36 h-8 rounded-xl font-semibold'
+                >
+                    {button}
+                </button>
+                
+    
             </div>
-            </div>
+            
+        </div>
+        
         </div>
         
         </div>
